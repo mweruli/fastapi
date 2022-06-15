@@ -26,7 +26,7 @@ conf = ConnectionConfig(
     MAIL_SSL = False,
     USE_CREDENTIALS = True,
     VALIDATE_CERTS = True,
-    TEMPLATE_FOLDER= "templates"
+    TEMPLATE_FOLDER= "app/templates"
 )
 
 async def send_registration_email(subject: str, email_to: str, body: dict):
