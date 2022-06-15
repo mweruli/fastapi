@@ -8,8 +8,8 @@ import string
 from sqlalchemy import Column, Boolean, String, Text, Enum, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.expression import null
-from db.database import Base
-from db.models.mixins import Timestap
+from app.db.database import Base
+from app.db.models.mixins import Timestap
 import enum
 
 

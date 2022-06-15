@@ -1,8 +1,8 @@
 
 from sqlalchemy.orm import Session
-from db.models.user import User
-from schemas.user import UserCreate
-from routers.utils.hash import Hash
+from app.db.models.user import User
+from app.schemas.user import UserCreate
+from app.routers.utils.hash import Hash
 import secrets
 
 def get_user(db: Session, user_id: int):

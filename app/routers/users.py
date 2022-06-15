@@ -1,13 +1,13 @@
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from db.database import get_db
-from schemas.user import User, UserCreate, UserResponse, UserBase
-from settings import Settings
-from routers.utils.user import get_user, get_user_by_email, get_users, create_user, get_user_by_name
+from app.db.database import get_db
+from app.schemas.user import User, UserCreate, UserResponse, UserBase
+from app.settings import Settings
+from app.routers.utils.user import get_user, get_user_by_email, get_users, create_user, get_user_by_name
 from fastapi.encoders import jsonable_encoder
 import secrets
-from routers.utils.send_mail import send_registration_email
+from app.routers.utils.send_mail import send_registration_email
 
 
 router = APIRouter(
