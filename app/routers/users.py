@@ -11,7 +11,7 @@ from app.routers.utils.send_mail import send_registration_email
 
 
 router = APIRouter(
-    tags=["Users"]
+    tags=["Users Registration"]
 )
 
 @router.get("/users", response_model=List[User])
