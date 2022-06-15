@@ -31,10 +31,10 @@ async def create_new_user(user:UserCreate, db: Session = Depends(get_db)):
     if email_found:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=f"Email already taken")
 
-    await send_registration_email("Registration Successful", user.email, {
-        "title": "Registration Sucessful",
-        "name": user.username
-    })
+    # await send_registration_email("Registration Successful", user.email, {
+    #     "title": "Registration Sucessful",
+    #     "name": user.username
+    # })
     
     return create_user(db=db, user=user)
 
