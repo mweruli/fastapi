@@ -1,0 +1,24 @@
+name: BlogAPI test
+
+# specify the on which action this action should work on
+on:
+  # specify the branches this action works on
+  push:
+    # this is also a valid syntax
+    # branches: ["master", "main"]
+    branches:
+      - "main"
+      - "master"
+
+jobs:
+  # job name can be anything
+  build:
+    # specify the OS to run on.
+    runs-on: ubuntu-latest
+    # steps, things done. Each step has a name that is used to identify the step
+    steps:
+      - name: Push repo
+        # https://github.com/orgs/actions/repositories?type=all
+        uses: actions/checkout@v3
+      - name: say hello
+        run: echo "hello world"
