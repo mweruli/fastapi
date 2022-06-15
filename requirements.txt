@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+psycopg2
+SQLAlchemy
+python-dotenv
+databases[postgresql]
+alembic
+pydantic[email]
+passlib[bcrypt]
+fastapi-mail
